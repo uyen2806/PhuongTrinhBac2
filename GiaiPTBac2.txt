@@ -1,0 +1,45 @@
+# bao gồm <iostream>
+#inc loại <math.h>
+sử dụng không gian tên std;
+int giaiPT (float a, float b, float c, float & x1, float & x2) {
+    thả nổi delta = b * b - 4 * a * c;
+    if (delta <0) {
+        x1 = x2 = 0,0;
+        trả về 0;
+    }
+    khác nếu (delta == 0) {
+        x1 = x2 = -b / (2 * a);
+        trả lại 1;
+    }
+    khác {
+        delta = sqrt (delta);
+        x1 = (-b + delta) / (2 * a);
+        x2 = (-b - đồng bằng) / (2 * a);
+        trả lại 2;
+    }
+}
+int chính () {
+    phao a, b, c;
+    phao x1, x2;
+    làm {
+        cout << "Nhặt a (a! = 0):";
+        điện ảnh >> a;
+        cout << "Nhập b:";
+        điện ảnh >> b;
+        cout << "Nhập c:";
+        điện ảnh >> c;
+    }
+    trong khi một);
+        int numNo = giaiPT (a, b, c, x1, x2);
+    if (numNo == 0) {
+        cout << "Phương trình đã cho vô nghiệm";
+    }
+    khác nếu (numNo == 1) {
+        cout << "Phương trình đã cho có nghiệm kép x =%. 4f" << x1;
+    }
+    khác {
+        cout << "Phương trình đã cho có hai nghiệm phân biệt" << endl;
+        cout << "x1 =" << x1 << endl;
+        cout << "x2 =" << x2 << endl;
+    }
+}
